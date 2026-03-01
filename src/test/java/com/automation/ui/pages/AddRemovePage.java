@@ -5,12 +5,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import com.automation.ui.base.BaseSetup;
-
 import java.time.Duration;
 
-public class AddRemovePage extends BaseSetup {
+public class AddRemovePage  {
     private WebDriver driver;
     private WebDriverWait wait;
 
