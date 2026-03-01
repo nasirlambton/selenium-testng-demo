@@ -18,6 +18,7 @@ public class ElementsTest extends BaseSetup {
         AddRemovePage page = new AddRemovePage(driver);
 
         page.open();
+        page.clickPageLink();
         page.clickAddElement();
 
         Assert.assertTrue(page.isDeleteButtonDisplayed(), "Delete button is not displayed");

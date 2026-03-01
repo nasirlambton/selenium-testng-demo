@@ -20,6 +20,9 @@ public class AddRemovePage extends BaseSetup {
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
+    //Locator for clicking on page link
+    private By pageLink = By.xpath("//a[text()='Add/Remove Elements']");
+
     // Locator for Add Element button
     private By addElementButton = By.xpath("//button[text()='Add Element']");
 
@@ -29,7 +32,11 @@ public class AddRemovePage extends BaseSetup {
     // Page Actions
 
     public void open() {
-        driver.get("https://the-internet.herokuapp.com/add_remove_elements/");
+        driver.get("https://the-internet.herokuapp.com");
+    }
+
+    public void clickPageLink(){
+        driver.findElement(pageLink).click();
     }
 
     public void clickAddElement() {
