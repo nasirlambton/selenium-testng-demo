@@ -33,9 +33,9 @@ public class AddRemovePage  {
     }
 
     public void clickPageLink(){
-        driver.findElement(pageLink).click();
+    wait.until(ExpectedConditions.elementToBeClickable(pageLink)).click();
     }
-
+    
     public void clickAddElement() {
         driver.findElement(addElementButton).click();
     }
