@@ -8,6 +8,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class ElementsTest extends BaseSetup {
+
     @BeforeMethod
     public void setupBrowser() {
         setup();
@@ -17,15 +18,14 @@ public class ElementsTest extends BaseSetup {
     public void verifyAddRemoveButton() {
         AddRemovePage page = new AddRemovePage(driver);
 
-        page.open();
-        page.clickPageLink();
+        page.openAddRemovePage();
         page.clickAddElement();
 
-        Assert.assertTrue(page.isDeleteButtonDisplayed(), "Delete button is not displayed");
+        Assert.assertTrue(page.isDeleteButtonDisplayed());
     }
 
     @AfterMethod
     public void cleanup() {
-        teardown(); 
+        teardown();
     }
 }
