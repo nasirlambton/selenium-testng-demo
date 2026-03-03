@@ -1,4 +1,5 @@
 package com.automation.ui.pages;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import com.automation.ui.base.BasePage;
@@ -11,6 +12,10 @@ public class AddRemovePage extends BasePage {
     public AddRemovePage(WebDriver driver) {
         super(driver);
     }
+
+    public void openAddRemovePage() {
+    driver.get("https://the-internet.herokuapp.com/add_remove_elements/");
+}
 
     public void clickAddElement() {
         click(addElementButton);
